@@ -136,6 +136,7 @@ body {
   height: 100%;
   font-family: Raleway;
   font-size: 12pt;
+  background-color: #e7e7e8;
 }
 header {
   padding: 30px;
@@ -253,11 +254,19 @@ a.hidden:active {
 }
 .wrapper-slider {
   width: 1000px;
+  margin: 0 auto;
 }
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
+}
+.owl-prev,
+.owl-next {
+  background-color: #bb0000 !important;
+}
+.owl-theme .owl-controls .owl-page span {
+  background-color: #bb0000 !important;
 }
 /* CONTENT */
 h1 {
@@ -267,15 +276,65 @@ h1 {
   font-style: italic;
   margin-bottom: 10px;
 }
+h2 {
+  padding-top: 40px;
+  margin-bottom: 10px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+h3 {
+  padding-top: 20px;
+  font-weight: bold;
+}
 main {
-  background-color: #e7e7e8;
   padding: 30px;
+  text-align: center;
 }
 main .wrapper {
   width: 90%;
-  height: 500px;
   padding-left: 100px;
 }
 main .wrapper a.target:hover {
   color: #666;
+}
+main .ContainerModels {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+main .ContainerModels .Model {
+  background-color: white;
+  border: 3px solid white;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+main .ContainerModels .Model .Picture {
+  height: 70%;
+}
+main .ContainerModels .Model .Picture img {
+  width: 100%;
+  height: 100%;
+}
+main .ContainerModels .Model:hover {
+  border-top: 3px solid #bb0000;
+}
+main .Description {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+main .Description .presentation-models {
+  line-height: 20pt;
+  text-align: initial;
+}
+footer {
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  border-top: 2px solid #bb0000;
 }
