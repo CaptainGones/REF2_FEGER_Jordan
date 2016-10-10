@@ -57,15 +57,13 @@
             <p>Le <strong>Fiat Multipla</strong> est un monospace fabriqué par le constructeur italien Fiat de 1998 à 2010.</p>
             
             <div class="ContentGamme">
-                <h2><span class="marque-color">FIAT</span> MULTIPLA Série 1</h2>
-                
                 <div class="ContainerM1">
                     <div class="LeftSide">
                         <img src="img/gamme1.jpg">
                     </div>
                     
                     <div class="RightSide">
-                    d
+                        <h2><span class="marque-color">FIAT</span> MULTIPLA Série 1</h2>
                     </div>
                 </div>
             </div>
@@ -75,6 +73,58 @@
     <footer>
         <a href="#">Haut de page</a>
     </footer>
+    
+     <!-- initialize a selector as an accessibleMegaMenu -->
+    <script>
+        $("nav:first").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required 
+               to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+
+            /* css class for the hover state */
+            hoverClass: "hover",
+
+            /* css class for the focus state */
+            focusClass: "focus",
+
+            /* css class for the open state */
+            openClass: "open"
+        });
+
+        $( document ).ready(function() {
+        // bind a click event to the 'skip' link
+        $(".skip").click(function(event){
+    
+            // strip the leading hash and declare
+            // the content we're skipping to
+            var skipTo="#"+this.href.split('#')[1];
+    
+            // Setting 'tabindex' to -1 takes an element out of normal 
+            // tab flow but allows it to be focused via javascript
+            $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+    
+                // when focus leaves this element, 
+                // remove the tabindex attribute
+                $(this).removeAttr('tabindex');
+    
+            }).focus(); // focus on the content container
+        });
+    });
+        
+        
+    </script>
 
 </body>
 </html>
