@@ -93,6 +93,35 @@ a:hover{
 	color: #e22424;
 }
 
+/* ____________________ Style du tableau _____________________ */
+
+table{
+    background-color: #e7e7e8;
+    text-align: center;
+    
+    caption{
+        font-style: italic;
+        color: #666;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    
+    th{
+        font-weight: bold;          
+    }
+    
+    .categorie-principale{
+        font-style: italic;
+    }
+    
+    td, th{
+        padding: 10px;
+        border: 1px solid #666;
+    }
+    
+}
+
 /* ____________________ Menu _________________ */
 
 .logo{
@@ -103,9 +132,7 @@ a:hover{
     .txt-logo{
         font-weight: bold;
         text-transform: uppercase;
-        font-size: 12pt;
-        
-       
+        font-size: 12pt;    
     }
 }
 
@@ -244,8 +271,11 @@ h2{
 }
 
 h3{
-    padding-top: 20px;
     font-weight: bold;
+}
+
+h3.model{
+    padding-top: 20px;
 }
 
 main{
@@ -307,6 +337,7 @@ main{
     
     // Page de la gamme
     .ContentGamme{
+        margin-top: 30px;
         text-align: left;
         
         .ContainerM1{
@@ -315,7 +346,7 @@ main{
             background-color: white;
             
             .LeftSide{
-                width: 55%;
+                width: 45%;
                 
                 img{
                     width: 90%;
@@ -324,9 +355,58 @@ main{
             }
             
             .RightSide{ 
-                width: 45%;
+                width: 55%;
             }
         }   
+    }
+    
+    .SkillsCar{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .ItemSkills{
+            width: 20%;
+            height: auto;
+            background-color: white;
+            margin-right: 80px;
+            
+            .SkillPicture{
+                
+                .pic1, .pic2, .pic3{
+                     background-size: cover;    
+                    height: 200px;
+                }
+                
+                .pic1{
+                    background-image: url("../img/3places.jpg");
+                }
+                
+                .pic2{
+                    background-image: url("../img/fenetregeante.jpg");
+                }
+                
+                .pic3{
+                    background-image: url("../img/tableaubord.jpg");
+                }
+            }
+            
+            .SkillContent{
+                padding: 20px;
+                
+                hr{
+                    display: block;
+                    border: 1px solid #e7e7e8;
+                }
+                
+                p.description-skill{
+                    margin-top: 10px;
+                    line-height: 15pt;
+                }
+            }
+        }
     }
     
 }

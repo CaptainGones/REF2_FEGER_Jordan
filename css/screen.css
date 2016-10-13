@@ -162,6 +162,29 @@ a.active {
 a:hover {
   color: #e22424;
 }
+/* ____________________ Style du tableau _____________________ */
+table {
+  background-color: #e7e7e8;
+  text-align: center;
+}
+table caption {
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+table th {
+  font-weight: bold;
+}
+table .categorie-principale {
+  font-style: italic;
+}
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid #666;
+}
 /* ____________________ Menu _________________ */
 .logo {
   float: left;
@@ -290,8 +313,10 @@ h2 {
   font-weight: bold;
 }
 h3 {
-  padding-top: 20px;
   font-weight: bold;
+}
+h3.model {
+  padding-top: 20px;
 }
 main {
   padding: 30px;
@@ -340,6 +365,7 @@ main .Description .presentation-models {
   text-align: initial;
 }
 main .ContentGamme {
+  margin-top: 30px;
   text-align: left;
 }
 main .ContentGamme .ContainerM1 {
@@ -348,14 +374,53 @@ main .ContentGamme .ContainerM1 {
   background-color: white;
 }
 main .ContentGamme .ContainerM1 .LeftSide {
-  width: 55%;
+  width: 45%;
 }
 main .ContentGamme .ContainerM1 .LeftSide img {
   width: 90%;
   height: 100%;
 }
 main .ContentGamme .ContainerM1 .RightSide {
-  width: 45%;
+  width: 55%;
+}
+main .SkillsCar {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main .SkillsCar .ItemSkills {
+  width: 20%;
+  height: auto;
+  background-color: white;
+  margin-right: 80px;
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic1,
+main .SkillsCar .ItemSkills .SkillPicture .pic2,
+main .SkillsCar .ItemSkills .SkillPicture .pic3 {
+  background-size: cover;
+  height: 200px;
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic1 {
+  background-image: url("../img/3places.jpg");
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic2 {
+  background-image: url("../img/fenetregeante.jpg");
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic3 {
+  background-image: url("../img/tableaubord.jpg");
+}
+main .SkillsCar .ItemSkills .SkillContent {
+  padding: 20px;
+}
+main .SkillsCar .ItemSkills .SkillContent hr {
+  display: block;
+  border: 1px solid #e7e7e8;
+}
+main .SkillsCar .ItemSkills .SkillContent p.description-skill {
+  margin-top: 10px;
+  line-height: 15pt;
 }
 footer {
   padding: 50px;
