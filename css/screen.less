@@ -286,8 +286,8 @@ main{
         width: 90%;
         padding-left: 100px;
         
-        a.target:hover{
-            color: #666;
+        a.target{
+            color: black;
         }
     }
     
@@ -375,8 +375,8 @@ main{
             
             .SkillPicture{
                 
-                .pic1, .pic2, .pic3{
-                     background-size: cover;    
+                .pic1, .pic2, .pic3, .pic4, .pic5, .pic6{
+                    background-size: cover;    
                     height: 200px;
                 }
                 
@@ -390,6 +390,18 @@ main{
                 
                 .pic3{
                     background-image: url("../img/tableaubord.jpg");
+                }
+                
+                .pic4{
+                    background-image: url("../img/6places.jpg");
+                }
+                
+                .pic5{
+                    background-image: url("../img/fenetre2.jpeg"); 
+                }
+                
+                .pic6{
+                    background-image: url("../img/tableaubord2.jpg"); 
                 }
             }
             
@@ -405,6 +417,37 @@ main{
                     margin-top: 10px;
                     line-height: 15pt;
                 }
+            }
+        }
+    }
+    
+    // Page Contact
+    
+    form{
+        text-align: left;
+        
+        fieldset{
+            
+            border: 1px solid #666;
+            width: 100%;
+            padding: 20px;
+            margin: 30px 0 50px 0;
+            
+            legend{
+                margin-left: 10%;
+                padding: 0 10px 0 10px;
+                font-weight: bold;
+            }
+            
+            label{
+                width: 10%;
+                display: inline-block;
+            }
+            
+            input[type="text"], input[type="email"]{
+                background-color: white;
+                padding: 5px;
+                width: 30%;
             }
         }
     }

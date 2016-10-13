@@ -326,8 +326,8 @@ main .wrapper {
   width: 90%;
   padding-left: 100px;
 }
-main .wrapper a.target:hover {
-  color: #666;
+main .wrapper a.target {
+  color: black;
 }
 main .ContainerModels {
   padding-top: 20px;
@@ -398,7 +398,10 @@ main .SkillsCar .ItemSkills {
 }
 main .SkillsCar .ItemSkills .SkillPicture .pic1,
 main .SkillsCar .ItemSkills .SkillPicture .pic2,
-main .SkillsCar .ItemSkills .SkillPicture .pic3 {
+main .SkillsCar .ItemSkills .SkillPicture .pic3,
+main .SkillsCar .ItemSkills .SkillPicture .pic4,
+main .SkillsCar .ItemSkills .SkillPicture .pic5,
+main .SkillsCar .ItemSkills .SkillPicture .pic6 {
   background-size: cover;
   height: 200px;
 }
@@ -411,6 +414,15 @@ main .SkillsCar .ItemSkills .SkillPicture .pic2 {
 main .SkillsCar .ItemSkills .SkillPicture .pic3 {
   background-image: url("../img/tableaubord.jpg");
 }
+main .SkillsCar .ItemSkills .SkillPicture .pic4 {
+  background-image: url("../img/6places.jpg");
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic5 {
+  background-image: url("../img/fenetre2.jpeg");
+}
+main .SkillsCar .ItemSkills .SkillPicture .pic6 {
+  background-image: url("../img/tableaubord2.jpg");
+}
 main .SkillsCar .ItemSkills .SkillContent {
   padding: 20px;
 }
@@ -421,6 +433,30 @@ main .SkillsCar .ItemSkills .SkillContent hr {
 main .SkillsCar .ItemSkills .SkillContent p.description-skill {
   margin-top: 10px;
   line-height: 15pt;
+}
+main form {
+  text-align: left;
+}
+main form fieldset {
+  border: 1px solid #666;
+  width: 100%;
+  padding: 20px;
+  margin: 30px 0 50px 0;
+}
+main form fieldset legend {
+  margin-left: 10%;
+  padding: 0 10px 0 10px;
+  font-weight: bold;
+}
+main form fieldset label {
+  width: 10%;
+  display: inline-block;
+}
+main form fieldset input[type="text"],
+main form fieldset input[type="email"] {
+  background-color: white;
+  padding: 5px;
+  width: 30%;
 }
 footer {
   padding: 50px;

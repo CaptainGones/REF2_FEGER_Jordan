@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  	<title>FIAT MULTIPLA - Contact</title>
+  	<link rel="stylesheet" href="css/screen.css">
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- include the jquery-accessibleMegaMenu plugin script -->
+    <script src="js/megamenu.js"></script>
+</head>
+<body>
+  	<header>
+        <div id="skiprow2">
+            <a class="hidden" href="#caracteristiques" title="Afficher les caractéristiques techniques">Caractéristiques</a>
+            <a class="hidden" href="#qualites" title="Voir les qualités du Mutlipla série 1">Qualités</a>
+        </div>
+        <div class="logo">
+            <span class="txt-logo"><span class="marque-color">FIAT</span> MULTIPLA</span>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="menu" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menu" href="">Gamme de produits</a>
+                    <div class="sub-nav">
+                        <ul class="sub-nav-group">
+                            <li><a href="multipla1.html">MULTIPLA 1</a></li>
+                            <li><a href="multipla2.html">MULTIPLA 2</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="menu active" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
+  	</header>
+  	
+	<main>
+        <div class="wrapper">
+            <h1><span class="marque-color">Informations</span> pratiques</h1>
+            
+            <form action="" method="post" id="formulaire">
+                <h2>Nous contacter</h2>
+                <p>Les champs précédés d'une <span class="marque-color"><strong>*</strong></span> <strong>sont obligatoires</strong>.</p>
+                
+                <fieldset>
+                    <legend>Données personnelles</legend>
+                    
+                    <p>
+                        <label for="nom"><span class="marque-color"><strong>*</strong></span> Nom :</label>
+                        <input id="nom" type="text" name="nom" placeholder="Saisissez votre nom" required="required"/>
+                    </p>
+                    
+                    <p>
+                        <label for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
+                        <input id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
+                    </p>
+                    
+                    <p>
+                        <label for="email"><span class="marque-color"><strong>*</strong></span> Email :</label>
+                        <input id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Centres d'intérêt</legend>
+                    
+                    <input id="html2" type="checkbox" name="html2" />
+                    <label for="html2">Html</label>
+              
+                    <input id="css" type="checkbox" name="css" />
+                    <label for="css">Css</label>
+
+                    <input id="js" type="checkbox" name="js" />
+                    <label for="js">Javascript</label>
+          
+                    <input id="accessibilite" type="checkbox" name="accessibilite" />
+                    <label for="accessibilite">Accessibilité</label>
+                </fieldset>
+                
+                <input id="newsletter" type="checkbox" name="newsletter" />
+                <label for="newsletter">Je désire m'abonner à la lettre d'information</label>
+           
+                <input type="submit" name="envoyer" value="Envoyer" />
+                <input type="reset" name="reset" value="Vider le formulaire" />
+            </form>
+        </div>
+    </main>
+  	
+    <footer>
+        <a href="#">Haut de page</a>
+    </footer>
+    
+     <!-- initialize a selector as an accessibleMegaMenu -->
+    <script>
+        $("nav:first").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required 
+               to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+
+            /* css class for the hover state */
+            hoverClass: "hover",
+
+            /* css class for the focus state */
+            focusClass: "focus",
+
+            /* css class for the open state */
+            openClass: "open"
+        });
+
+        $( document ).ready(function() {
+        // bind a click event to the 'skip' link
+        $(".skip").click(function(event){
+    
+            // strip the leading hash and declare
+            // the content we're skipping to
+            var skipTo="#"+this.href.split('#')[1];
+    
+            // Setting 'tabindex' to -1 takes an element out of normal 
+            // tab flow but allows it to be focused via javascript
+            $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+    
+                // when focus leaves this element, 
+                // remove the tabindex attribute
+                $(this).removeAttr('tabindex');
+    
+            }).focus(); // focus on the content container
+        });
+    });
+        
+        
+    </script>
+
+</body>
+</html>
