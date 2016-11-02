@@ -125,6 +125,24 @@ table {
   border-spacing: 0;
 }
 /* ____________________________________________________________ SCREEN CSS _______________ */
+[class*="col-"] {
+  float: left;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 p {
   margin: 0 0 10px 0;
 }
@@ -187,9 +205,8 @@ table th {
 }
 /* ____________________ Menu _________________ */
 .logo {
-  float: left;
-  padding-left: 100px;
   padding-top: 8px;
+  float: left;
 }
 .logo .txt-logo {
   font-weight: bold;
@@ -283,7 +300,6 @@ a.hidden:active {
   left: 20px;
 }
 .wrapper-slider {
-  width: 1000px;
   margin: 0 auto;
 }
 #owl-demo .item img {
@@ -319,40 +335,33 @@ h3.model {
   padding-top: 20px;
 }
 main {
-  padding: 30px;
   text-align: center;
 }
 main .wrapper {
-  width: 90%;
-  padding-left: 100px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 main .wrapper a.target {
   color: black;
 }
 main .ContainerModels {
   padding-top: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow: hidden;
   width: 100%;
   height: auto;
 }
-main .ContainerModels .Model {
-  background-color: white;
-  border: 3px solid white;
-  width: 300px;
-  height: 300px;
+main .ContainerModels .Model .WhiteContent {
   margin: 10px;
+  padding: 10px 0;
+  background-color: white;
 }
-main .ContainerModels .Model .Picture {
-  height: 70%;
+main .ContainerModels .Model .WhiteContent .ContainerForHover {
+  overflow: hidden;
 }
-main .ContainerModels .Model .Picture img {
-  width: 100%;
-  height: 100%;
+main .ContainerModels .Model .WhiteContent .ContainerForHover .Picture {
+  height: 200px;
 }
-main .ContainerModels .Model:hover {
+main .ContainerModels .Model .WhiteContent:hover {
   border-top: 3px solid #bb0000;
 }
 main .Description {
@@ -365,36 +374,23 @@ main .Description .presentation-models {
   text-align: initial;
 }
 main .ContentGamme {
-  margin-top: 30px;
   text-align: left;
 }
 main .ContentGamme .ContainerM1 {
-  display: flex;
-  flex-direction: row;
   background-color: white;
+  overflow: hidden;
 }
-main .ContentGamme .ContainerM1 .LeftSide {
-  width: 45%;
-}
-main .ContentGamme .ContainerM1 .LeftSide img {
-  width: 90%;
-  height: 100%;
-}
-main .ContentGamme .ContainerM1 .RightSide {
-  width: 55%;
+main .ContentGamme .ContainerM1 .col-7 .Content {
+  padding: 10px 30px;
 }
 main .SkillsCar {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  margin: 50px 0;
+  overflow: hidden;
 }
 main .SkillsCar .ItemSkills {
-  width: 20%;
-  height: auto;
+  margin: 10px;
+  height: 400px;
   background-color: white;
-  margin-right: 80px;
 }
 main .SkillsCar .ItemSkills .SkillPicture .pic1,
 main .SkillsCar .ItemSkills .SkillPicture .pic2,
@@ -404,6 +400,7 @@ main .SkillsCar .ItemSkills .SkillPicture .pic5,
 main .SkillsCar .ItemSkills .SkillPicture .pic6 {
   background-size: cover;
   height: 200px;
+  background-position: center;
 }
 main .SkillsCar .ItemSkills .SkillPicture .pic1 {
   background-image: url("../img/3places.jpg");
@@ -439,7 +436,6 @@ main form {
 }
 main form fieldset {
   border: 1px solid #666;
-  width: 100%;
   padding: 20px;
   margin: 30px 0 50px 0;
 }
@@ -449,18 +445,96 @@ main form fieldset legend {
   font-weight: bold;
 }
 main form fieldset label {
-  width: 10%;
   display: inline-block;
+  margin-top: 20px;
 }
 main form fieldset input[type="text"],
 main form fieldset input[type="email"] {
   background-color: white;
-  padding: 5px;
-  width: 30%;
+  padding: 5px 0;
+  width: 100%;
 }
 footer {
   padding: 50px;
   text-align: center;
   background-color: white;
   border-top: 2px solid #bb0000;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 }
