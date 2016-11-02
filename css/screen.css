@@ -432,7 +432,7 @@ main .SkillsCar .ItemSkills .SkillContent p.description-skill {
   line-height: 15pt;
 }
 main form {
-  text-align: left;
+  text-align: center;
 }
 main form fieldset {
   border: 1px solid #666;
@@ -451,8 +451,15 @@ main form fieldset label {
 main form fieldset input[type="text"],
 main form fieldset input[type="email"] {
   background-color: white;
-  padding: 5px 0;
+  padding: 5px 0 5px 5px;
   width: 100%;
+  text-align: center;
+}
+main form fieldset .name {
+  width: 200px !important;
+}
+main form fieldset .email {
+  width: 600px !important;
 }
 footer {
   padding: 50px;

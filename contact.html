@@ -60,14 +60,14 @@
                     </p>
                     <p>
                         
-                        <input id="nom" type="text" name="nom" placeholder="Saisissez votre nom" required="required"/>
+                        <input class="name" id="nom" type="text" name="nom" placeholder="Saisissez votre nom" required="required"/>
                     </p>
                     
                     <p>
                         <label for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
                     </p>
                     <p>
-                        <input id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
+                        <input class="name" id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
                     </p>
                     
                     <p class="col-12">
@@ -75,31 +75,39 @@
                     </p>
                     <p>
                         
-                        <input id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
+                        <input class="email" id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
                     </p>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Centres d'intérêt</legend>
+                    <legend>Votre demande</legend>
                     
-                    <input id="html2" type="checkbox" name="html2" />
-                    <label for="html2">Html</label>
-              
-                    <input id="css" type="checkbox" name="css" />
-                    <label for="css">Css</label>
-
-                    <input id="js" type="checkbox" name="js" />
-                    <label for="js">Javascript</label>
-          
-                    <input id="accessibilite" type="checkbox" name="accessibilite" />
-                    <label for="accessibilite">Accessibilité</label>
+                    <div class="col-3">
+                        <input id="reparation" type="checkbox"   name="reparation" />
+                        <label for="reparation">Réparation de ma FIAT Multipla</label>
+                    </div>
+                    
+                    <div class="col-3">
+                        <input id="documentation" type="checkbox" name="documentation"  />
+                        <label for="documentation">Demande de documentation</label>
+                    </div>
+                    
+                    <div class="col-3">
+                        <input id="contact" type="checkbox" name="contact" aria-required="true"/>
+                    <label for="contact">Être contacté par nos spécialistes</label>
+                    </div>
+                    
+                    <div class="col-3">
+                        <input id="rdv" type="checkbox"  name="rdv" aria-required="true"/>
+                        <label for="rdv">Prendre un rendez-vous</label>
+                    </div>
                 </fieldset>
                 
-                <input id="newsletter" type="checkbox" name="newsletter" />
+                <input id="newsletter" type="checkbox" name="newsletter" aria-required="true"/>
                 <label for="newsletter">Je désire m'abonner à la lettre d'information</label>
            
-                <input type="submit" name="envoyer" value="Envoyer" />
-                <input type="reset" name="reset" value="Vider le formulaire" />
+                <input type="submit" name="envoyer" value="Envoyer" aria-required="true"/>
+                <input type="reset" name="reset" value="Vider le formulaire" aria-required="false"/>
             </form>
         </div>
     </main>
