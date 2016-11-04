@@ -347,6 +347,9 @@ h3.model {
 .search input[type="submit"] {
   padding: 5px;
 }
+.search .t {
+  margin-bottom: 10px;
+}
 main {
   text-align: center;
 }

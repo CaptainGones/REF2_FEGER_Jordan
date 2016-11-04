@@ -52,8 +52,12 @@
   	</header>
   	
     <div class="col-12 search">
-        <input type="search" placeholder="Rechercher sur le site" name="the_search">
-        <input type="submit" value="Rechercher" />
+        <div class="col-12 t">
+            <input type="search" placeholder="Rechercher sur le site" name="the_search">
+            <input type="submit" value="Rechercher" />
+        </div>
+        
+        <a href="contact.html" class="active" title="Contact">Contact</a> >
     </div>
     
 	<main role="main">
@@ -69,7 +73,7 @@
                     
                     <div class="col-6">
                         <p>
-                            <label for="nom"><span class="marque-color"><strong>*</strong></span> Nom :</label>
+                            <label accesskey="n" for="nom"><span class="marque-color"><strong>*</strong></span> Nom :</label>
                         </p>
                         <p class="input">
 
@@ -79,7 +83,7 @@
                     
                     <div class="col-6">
                         <p>
-                            <label for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
+                            <label accesskey="p" for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
                         </p>
                         <p class="input">
                             <input class="name" id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
@@ -88,7 +92,7 @@
                     
                     <div class="col-12">
                         <p>
-                            <label for="email"><span class="marque-color"><strong>*</strong></span> Email :</label>
+                            <label accesskey="e" for="email"><span class="marque-color"><strong>*</strong></span> Email :</label>
                         </p>
                         <p class="input">
                             <input class="email" id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
@@ -97,7 +101,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend role="listbox">Votre demande</legend>
+                    <legend accesskey="d" role="listbox">Votre demande</legend>
                     
                     <div class="col-3">
                         <input role="option" id="reparation" type="checkbox"   name="reparation" />
@@ -131,7 +135,7 @@
     </main>
   	
     <footer role="contentinfo">
-        <a title="Revenir en haut de page" href="#">Haut de page</a>
+        <a title="Revenir en haut de page" href="#">Haut de page</a> - <a href="charte.html" title="Charte d'Accessibilité">Charte d'Accessibilité</a>
     </footer>
     
      <!-- initialize a selector as an accessibleMegaMenu -->
