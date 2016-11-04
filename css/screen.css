@@ -46,9 +46,6 @@ center,
 dl,
 dt,
 dd,
-ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -104,10 +101,6 @@ section {
 }
 body {
   line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
 }
 blockquote,
 q {
@@ -181,6 +174,9 @@ a:hover {
   color: #e22424;
 }
 /* ____________________ Style du tableau _____________________ */
+.Bottom {
+  margin-top: 40px;
+}
 table {
   background-color: #e7e7e8;
   text-align: center;
@@ -211,10 +207,13 @@ table th {
 .logo .txt-logo {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12pt;
+  font-size: 3vh;
 }
 .marque-color {
   color: #bb0000;
+}
+.hidden {
+  display: none !important;
 }
 .nav-menu {
   text-align: center;
@@ -293,6 +292,7 @@ a:active {
 a.hidden {
   position: absolute;
   left: -999px;
+  top: 10px;
   overflow: hidden;
 }
 a.hidden:focus,
@@ -320,7 +320,7 @@ h1 {
   font-weight: bold;
   padding-bottom: 5px;
   font-style: italic;
-  margin-bottom: 10px;
+  margin: 20px 0;
 }
 h2 {
   padding-top: 40px;
@@ -333,6 +333,19 @@ h3 {
 }
 h3.model {
   padding-top: 20px;
+}
+.search {
+  text-align: center;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+.search input[type="search"] {
+  padding: 5px 50px;
+}
+.search input[type="submit"] {
+  padding: 5px;
 }
 main {
   text-align: center;
@@ -382,6 +395,25 @@ main .ContentGamme .ContainerM1 {
 }
 main .ContentGamme .ContainerM1 .col-7 .Content {
   padding: 10px 30px;
+}
+main .ContentGamme .ContainerM1 .col-7 .Content .ListeAPuce {
+  display: none;
+}
+main .ContentGamme .ContainerM1 .col-7 .Content .ListeAPuce ul {
+  list-style-type: circle;
+}
+main .ContentGamme .ContainerM1 .col-7 .Content .ListeAPuce li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+main .ContentGamme .ContainerM1 .col-7 .Content .ListeAPuce .cat {
+  color: #bb0000;
+  font-weight: bold;
+  padding: 5px 0;
+}
+main .ContentGamme .ContainerM1 .col-7 .Content .ListeAPuce .sous-cat {
+  font-weight: bold;
+  padding-top: 5px;
 }
 main .SkillsCar {
   margin: 50px 0;
@@ -433,6 +465,7 @@ main .SkillsCar .ItemSkills .SkillContent p.description-skill {
 }
 main form {
   text-align: center;
+  margin-bottom: 30px;
 }
 main form fieldset {
   border: 1px solid #666;
@@ -455,11 +488,11 @@ main form fieldset input[type="email"] {
   width: 100%;
   text-align: center;
 }
-main form fieldset .name {
-  width: 200px !important;
+main form fieldset .input {
+  margin: 0 50px;
 }
-main form fieldset .email {
-  width: 600px !important;
+main form .newsletter {
+  margin-bottom: 20px;
 }
 footer {
   padding: 50px;
@@ -543,5 +576,42 @@ footer {
   }
   .col-12 {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    float: none !important;
+  }
+  header li {
+    width: 100%;
+  }
+  header .hidden {
+    display: block !important;
+  }
+  header .visible {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 1115px) {
+  .ContentGamme .Content {
+    padding: 0px !important;
+  }
+  .ContentGamme .Content h2,
+  .ContentGamme .Content a {
+    padding: 10px 30px;
+  }
+  .ContentGamme .Content table {
+    display: none;
+  }
+  .ContentGamme .Content .ListeAPuce {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .ContentGamme .col-5,
+  .ContentGamme .col-7 {
+    width: 100% !important;
   }
 }

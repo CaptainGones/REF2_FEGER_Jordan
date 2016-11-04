@@ -13,7 +13,7 @@
     <script src="js/megamenu.js"></script>
 </head>
 <body>
-  	<header>
+  	<header role="banner">
         <div id="skiprow2">
             <a class="hidden" href="#caracteristiques" title="Afficher les caractéristiques techniques">Caractéristiques</a>
             <a class="hidden" href="#qualites" title="Voir les qualités du Mutlipla série 1">Qualités</a>
@@ -21,22 +21,29 @@
         <div class="logo">
             <span class="txt-logo"><span class="marque-color">FIAT</span> MULTIPLA</span>
         </div>
-        <nav>
+        
+        <nav role="navigation">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a class="menu" href="index.html">Accueil</a>
+                    <a class="menu" title="Page d'Accueil" href="index.html">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="menu" href="">Gamme de produits</a>
+                <li class="nav-item hidden">
+                    <a href="multipla1.html" title="Multipla série 1" class="menu">MULTIPLA 1</a>
+                </li>
+                <li class="nav-item hidden">
+                    <a href="multipla2.html" title="Multipla série 2" class="menu">MULTIPLA 2</a>
+                </li>
+                <li class="nav-item visible">
+                    <a class="menu" title="Gamme de produits" href="">Gamme de produits</a>
                     <div class="sub-nav">
                         <ul class="sub-nav-group">
-                            <li><a href="multipla1.html">MULTIPLA 1</a></li>
-                            <li><a href="multipla2.html">MULTIPLA 2</a></li>
+                            <li><a href="multipla1.html" title="Multipla série 1">MULTIPLA 1</a></li>
+                            <li><a href="multipla2.html" title="Multipla série 2">MULTIPLA 2</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="menu active" href="contact.html">Contact</a>
+                    <a class="menu active" title="Contact" href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -44,7 +51,12 @@
 
   	</header>
   	
-	<main>
+    <div class="col-12 search">
+        <input type="search" placeholder="Rechercher sur le site" name="the_search">
+        <input type="submit" value="Rechercher" />
+    </div>
+    
+	<main role="main">
         <div class="wrapper">
             <h1><span class="marque-color">Informations</span> pratiques</h1>
             
@@ -55,65 +67,71 @@
                 <fieldset>
                     <legend>Données personnelles</legend>
                     
-                    <p>
-                        <label for="nom"><span class="marque-color"><strong>*</strong></span> Nom :</label>
-                    </p>
-                    <p>
-                        
-                        <input class="name" id="nom" type="text" name="nom" placeholder="Saisissez votre nom" required="required"/>
-                    </p>
+                    <div class="col-6">
+                        <p>
+                            <label for="nom"><span class="marque-color"><strong>*</strong></span> Nom :</label>
+                        </p>
+                        <p class="input">
+
+                            <input class="name" id="nom" type="text" name="nom" placeholder="Saisissez votre nom" required="required"/>
+                        </p>
+                    </div>
                     
-                    <p>
-                        <label for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
-                    </p>
-                    <p>
-                        <input class="name" id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
-                    </p>
+                    <div class="col-6">
+                        <p>
+                            <label for="prenom"><span class="marque-color"><strong>*</strong></span> Prénom :</label>
+                        </p>
+                        <p class="input">
+                            <input class="name" id="prenom" type="text" name="prenom" placeholder="Saisissez votre prénom" required="required"/>
+                        </p>
+                    </div>
                     
-                    <p class="col-12">
-                        <label for="email"><span class="marque-color"><strong>*</strong></span> Email :</label>
-                    </p>
-                    <p>
-                        
-                        <input class="email" id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
-                    </p>
+                    <div class="col-12">
+                        <p>
+                            <label for="email"><span class="marque-color"><strong>*</strong></span> Email :</label>
+                        </p>
+                        <p class="input">
+                            <input class="email" id="email" type="email" name="email" placeholder="Saisissez votre email" required="required"/>
+                        </p>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Votre demande</legend>
+                    <legend role="listbox">Votre demande</legend>
                     
                     <div class="col-3">
-                        <input id="reparation" type="checkbox"   name="reparation" />
+                        <input role="option" id="reparation" type="checkbox"   name="reparation" />
                         <label for="reparation">Réparation de ma FIAT Multipla</label>
                     </div>
                     
                     <div class="col-3">
-                        <input id="documentation" type="checkbox" name="documentation"  />
+                        <input role="option" id="documentation" type="checkbox" name="documentation"  />
                         <label for="documentation">Demande de documentation</label>
                     </div>
                     
                     <div class="col-3">
-                        <input id="contact" type="checkbox" name="contact" aria-required="true"/>
+                        <input role="option" id="contact" type="checkbox" name="contact" aria-required="true"/>
                     <label for="contact">Être contacté par nos spécialistes</label>
                     </div>
                     
                     <div class="col-3">
-                        <input id="rdv" type="checkbox"  name="rdv" aria-required="true"/>
+                        <input role="option" id="rdv" type="checkbox"  name="rdv" aria-required="true"/>
                         <label for="rdv">Prendre un rendez-vous</label>
                     </div>
                 </fieldset>
                 
-                <input id="newsletter" type="checkbox" name="newsletter" aria-required="true"/>
-                <label for="newsletter">Je désire m'abonner à la lettre d'information</label>
-           
+                <div class="newsletter col-12">
+                    <input role="option" id="newsletter" type="checkbox" name="newsletter" aria-required="true"/>
+                    <label role="listbox" for="newsletter">Je désire m'abonner à la lettre d'information</label>
+                </div>
                 <input type="submit" name="envoyer" value="Envoyer" aria-required="true"/>
                 <input type="reset" name="reset" value="Vider le formulaire" aria-required="false"/>
             </form>
         </div>
     </main>
   	
-    <footer>
-        <a href="#">Haut de page</a>
+    <footer role="contentinfo">
+        <a title="Revenir en haut de page" href="#">Haut de page</a>
     </footer>
     
      <!-- initialize a selector as an accessibleMegaMenu -->

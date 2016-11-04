@@ -13,7 +13,7 @@
     <script src="js/megamenu.js"></script>
 </head>
 <body>
-  	<header>
+  	<header role="banner">
         <div id="skiprow2">
             <a class="hidden" href="#caracteristiques" title="Afficher les caractéristiques techniques">Caractéristiques</a>
             <a class="hidden" href="#qualites" title="Voir les qualités du Mutlipla série 1">Qualités</a>
@@ -21,35 +21,47 @@
             <div class="logo">
                 <span class="txt-logo"><span class="marque-color">FIAT</span> MULTIPLA</span>
             </div>
-            <nav>
+            <nav role="navigation">
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a class="menu" href="index.html">Accueil</a>
+                <li class="nav-item">
+                    <a class="menu" title="Page d'Accueil" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item hidden">
+                    <a href="multipla1.html" title="Multipla série 1" class="menu active">MULTIPLA 1</a>
+                </li>
+                <li class="nav-item hidden">
+                    <a href="multipla2.html" title="Multipla série 2" class="menu">MULTIPLA 2</a>
+                </li>
+                <li class="nav-item visible">
+                    <a class="menu active" title="Gamme de produits" href="">Gamme de produits</a>
+                    <div class="sub-nav">
+                        <ul class="sub-nav-group">
+                            <li><a href="multipla1.html" title="Multipla série 1" class="active">MULTIPLA 1</a></li>
+                            <li><a href="multipla2.html" title="Multipla série 2">MULTIPLA 2</a></li>
+                        </ul>
+                    </div>
+                    
                     </li>
                     <li class="nav-item">
-                        <a class="menu active" href="">Gamme de produits</a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a class="active" href="multipla1.html">MULTIPLA 1</a></li>
-                                <li><a href="multipla2.html">MULTIPLA 2</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="menu" href="contact.html">Contact</a>
+                        <a class="menu" title="Contact" href="contact.html">Contact</a>
                     </li>
                 </ul>
-            </nav>
+        </nav>
 
   	</header>
   	
-	<main>
+    <div class="col-12 search">
+        <input type="search" placeholder="Rechercher sur le site" name="the_search">
+        <input type="submit" value="Rechercher" />
+    </div>
+    
+	<main role="main">
         <div class="wrapper">
             <h1><span class="marque-color">FIAT</span> MULTIPLIA</h1>
             <p>Le <strong>Fiat Multipla</strong> est un monospace fabriqué par le constructeur italien Fiat de 1998 à 2010.</p>
             
             <div class="ContentGamme">
-                <div class="ContainerM1">
+                <div class="ContainerM1" role="article">
                     <div class="col-5">
                         <img alt="Multipla série 1 bleu vue de profil dans un entrepôt." src="img/gamme1.jpg">
                     </div>
@@ -57,19 +69,23 @@
                     <div class="col-7">
                         <div class="Content">
                             <h2><a name="caracteristiques" class="target"><span class="marque-color">FIAT</span> MULTIPLA Série 1</a></h2>
-
+                            
+                            <a title="Accéder aux tableaux simplifiés" href="tableaux-simples.html">Accéder aux tableaux simplifiés</a>
+                            
                             <table summary="Ce tableau présente les caractéristiques techniques de la FIAT Multipla série 1.">
                                 <caption>Caractéristiques techniques</caption>
                                 <thead>
                                     <tr>
                                         <th id="puissance" class="categorie-principale" colspan="2">Puissance</th>
-                                        <th id="consommation" rowspan="2">Consommation</th>
-                                        <th id="prix" rowspan="2">Prix</th>
-                                        <th id="annee-production" rowspan="2">Années de production</th>
+                                        <th id="infos-complementaires" class="categorie-principale" colspan="3">Autres</th>
+                                        
                                     </tr>
                                     <tr>
                                         <th id="chevaux">Chevaux</th>
                                         <th id="acceleration-maximale">Accélération maximale</th>
+                                        <th id="consommation">Consommation</th>
+                                        <th id="prix">Prix</th>
+                                        <th id="annee-production">Années de production</th>
                                     </tr>
                                 </thead>
 
@@ -78,12 +94,59 @@
                                     <tr>
                                         <td headers="puissance chevaux">120</td>
                                         <td headers="puissance acceleration-maximale">150km/h</td>
-                                        <td headers="consommation">7l/100km</td>
-                                        <td headers="prix">2 000€</td>
-                                        <td headers="annee-production">1998-2005</td>
+                                        <td headers="infos-complementaires consommation">7l/100km</td>
+                                        <td headers="infos-complementaires prix">2 000€</td>
+                                        <td headers="infos-complementaires annee-production">1998-2005</td>
                                     </tr>
                                     </tbody>
                             </table>
+                            <div class="ListeAPuce"> 
+                                <div class="col-5">
+                                    <nav>
+                                        <ul>
+                                            <li class="cat">Puissance</li>
+                                            <ul>
+                                                <li class="sous-cat">Chevaux</li>
+                                                <ul>
+                                                    <li>120</li>
+                                                </ul>
+                                            </ul>
+                                            <ul>
+                                                <li class="sous-cat">Accélération maximale</li>
+                                                <ul>
+                                                    <li>150 km/h</li>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <div class="col-5">
+                                    <nav>
+                                        <ul>
+                                            <li class="cat">Autres</li>
+                                            <ul>
+                                                <li class="sous-cat">Consommation</li>
+                                                <ul>
+                                                    <li>7l/100km</li>
+                                                </ul>
+                                            </ul>
+                                            <ul>
+                                                <li class="sous-cat">Prix</li>
+                                                <ul>
+                                                    <li>2000€</li>
+                                                </ul>
+                                            </ul>
+                                            <ul>
+                                                <li class="sous-cat">Années de production</li>
+                                                <ul>
+                                                    <li>1998-2005</li>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,7 +154,7 @@
             
             <div class="SkillsCar">
                 <div class="col-4">
-                    <div class="ItemSkills">
+                    <div class="ItemSkills" role="article">
                         <div class="SkillPicture">
                             <div class="pic1"></div>
                         </div>      
@@ -104,7 +167,7 @@
                 </div>
                 
                 <div class="col-4">
-                    <div class="ItemSkills">
+                    <div class="ItemSkills" role="article">
                         <div class="SkillPicture">
                             <div class="pic2"></div>
                         </div>      
@@ -117,7 +180,7 @@
                 </div>
                 
                 <div class="col-4">
-                    <div class="ItemSkills">
+                    <div class="ItemSkills" role="article">
                         <div class="SkillPicture">
                             <div class="pic3"></div>
                         </div>      
@@ -132,8 +195,8 @@
         </div>
     </main>
   	
-    <footer>
-        <a href="#">Haut de page</a>
+    <footer role="contentinfo">
+        <a title="Revenir en haut de page" href="#">Haut de page</a>
     </footer>
     
      <!-- initialize a selector as an accessibleMegaMenu -->

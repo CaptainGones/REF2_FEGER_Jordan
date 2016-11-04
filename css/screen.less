@@ -6,7 +6,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -28,9 +28,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+
 blockquote, q {
 	quotes: none;
 }
@@ -117,6 +115,9 @@ a:hover{
 }
 
 /* ____________________ Style du tableau _____________________ */
+.Bottom{
+    margin-top: 40px;
+}
 
 table{
     background-color: #e7e7e8;
@@ -154,13 +155,17 @@ table{
     .txt-logo{
         font-weight: bold;
         text-transform: uppercase;
-        font-size: 12pt;    
+        font-size: 3vh;    
     }
 }
 
 
 .marque-color{
     color: @rouge;
+}
+
+.hidden{
+    display: none !important;
 }
 
 .nav-menu{
@@ -250,6 +255,7 @@ a:hover, a:focus, a:active {
 a.hidden {
     position: absolute;
     left: -999px;
+    top: 10px;
     overflow:hidden;			
 }
 
@@ -281,7 +287,7 @@ h1{
     font-weight: bold;
     padding-bottom: 5px;
     font-style: italic;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 h2{
@@ -297,6 +303,22 @@ h3{
 
 h3.model{
     padding-top: 20px;
+}
+
+.search{
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    
+    input[type="search"]{
+        padding: 5px 50px;
+    }
+    
+    input[type="submit"]{
+        padding: 5px;
+    }
 }
 
 main{
@@ -363,6 +385,31 @@ main{
             .col-7{  
                 .Content{
                     padding: 10px 30px;
+                    
+                    .ListeAPuce{
+                        display: none;
+                        
+                        ul{
+                            list-style-type: circle;
+                        }
+                    
+                        li {
+                            display: list-item;
+                            text-align: -webkit-match-parent;
+                            
+                        }   
+                        
+                        .cat{
+                            color: @rouge;
+                            font-weight: bold;
+                            padding: 5px 0;
+                        }
+                        
+                        .sous-cat{
+                            font-weight: bold;
+                            padding-top: 5px;
+                        }
+                    }
                 }
             }
         }   
@@ -430,6 +477,7 @@ main{
     
     form{
         text-align: center;
+        margin-bottom: 30px;
         
         fieldset{   
             border: 1px solid #666;
@@ -454,14 +502,22 @@ main{
                 text-align: center;
             }
             
-            .name{
-                width: 200px !important;
+            .input{
+                margin: 0 50px;
             }
             
-            .email{
-                width: 600px !important;
-            }
+//            .name{
+//                width: 200px !important;
+//            }
+//            
+//            .email{
+//                width: 600px !important;
+//            }
             
+        }
+        
+        .newsletter{
+            margin-bottom: 20px;
         }
     }
     
@@ -477,7 +533,7 @@ footer{
 // Responsive 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px){
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
@@ -493,7 +549,7 @@ footer{
     .col-m-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px){
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -508,5 +564,55 @@ footer{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
+}
 
+@media only screen and (max-width: 650px){
+    header{
+        .logo{
+            text-align: center;
+            margin-bottom: 20px;
+            float: none !important;
+        }
+        
+        li{
+            width: 100%;
+        }
+        
+        .hidden{
+            display: block !important;
+        }
+        
+        .visible{
+            display: none !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1115px){
+    .ContentGamme{
+        
+        .Content{
+            padding: 0px !important;
+            
+            h2, a{
+                padding: 10px 30px;    
+            }
+            
+            table{
+                display: none;
+            }
+        
+            .ListeAPuce{
+                display: block !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 930px){
+    .ContentGamme{
+        .col-5, .col-7{
+            width: 100% !important;
+        }
+    }
 }
